@@ -1,3 +1,48 @@
-h1 {
-  color: red;
+@font-face {
+  font-family: "Norse Bold";
+  src: url("fonts/Norse-Bold.otf");
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  background: red;
+}
+
+.left {
+  width: max-content;
+  height: 100%;
+  position: relative;
+}
+
+.left .bg {
+  height: 100vh;
+}
+
+.left .odin-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  translate: -50%;
+  width: 100%;
+  background-color: rgb(0, 0, 0, 50%);
+  padding: 1rem;
+}
+
+.left .odin-text {
+  font-family: 'Norse Bold';
+  font-size: 6rem;
+  color: white;
+  text-transform: uppercase;
 }
