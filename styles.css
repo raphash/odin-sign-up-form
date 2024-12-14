@@ -27,11 +27,6 @@ body {
   height: 100vh;
 }
 
-h3,
-label {
-  font-family: "Roboto Bold";
-}
-
 .left {
   width: max-content;
   height: 100%;
@@ -80,6 +75,7 @@ label {
 }
 
 .right .top h3 {
+  font-family: "Roboto Bold";
   font-size: 1.6rem;
   font-weight: 700;
 }
@@ -97,13 +93,9 @@ label {
   gap: .3125rem;
 }
 
-.right .form-row input {
-  width: 200px;
-  height: 25px;
-}
-
 .right .form-row label,
 .right .form-row span {
+  font-family: "Roboto Bold";
   font-size: 0.75rem;
   font-weight: bold;
   text-transform: uppercase;
@@ -111,6 +103,8 @@ label {
 
 .right input {
   font-family: "Roboto Regular";
+  width: 200px;
+  height: 25px;
   outline: none;
   background-color: white;
   border: 1px solid #E5E7EB;
@@ -123,9 +117,14 @@ label {
   border-color: rgb(184, 45, 45);
 }
 
-.right input:valid,
+.right input:valid {
+  border-color: rgb(191, 191, 191);
+  background-color: white;
+}
+
 .right input:focus {
   border-color: rgb(45, 122, 184);
+  background-color: white;
 }
 
 .right input + span {
@@ -148,7 +147,7 @@ label {
   background-color: #f0f0f0;
 }
 
-.bottom-buttons button[type="submit"] {
+.right .bottom-buttons button[type="submit"] {
   font-family: "Roboto Bold";
   width: 200px;
   border: none;
@@ -160,11 +159,11 @@ label {
   appearance: none;
 }
 
-.bottom-buttons button[type="submit"]:hover {
+.right .bottom-buttons button[type="submit"]:hover {
   opacity: 0.8;
 }
 
-.bottom-buttons a {
+.right .bottom-buttons a {
   color: #596D48;
   font-weight: bold;
   text-decoration: none;
