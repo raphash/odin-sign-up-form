@@ -15,10 +15,96 @@
           <p class="odin-text">Odin</p>
         </div>
         
-        <img src="images/halie-west.jpg" class="bg">
+        <!-- https://unsplash.com/pt-br/@haliewestphoto -->
+        <img src="images/halie-west.jpg" class="bg" alt="">
       </div>
     </div>
-    <div class="right"></div>
+
+    <div class="right">
+      <div class="top">
+        <h3>Let's to this!</h3>
+
+        <form action="/register" class="form" id="register" method="post">
+          <div class="form-row">
+            <label for="first-name">First name *</label>
+            <input 
+              type="text" 
+              name="first-name" 
+              id="first-name" 
+              placeholder="Alex"
+              required>
+
+            <span>Required</span>
+          </div>
+
+          <div class="form-row">
+            <label for="last-name">Last name *</label>
+            <input 
+              type="text" 
+              name="last-name" 
+              id="last-name" 
+              placeholder="Neutron"
+              required>
+
+            <span>Required</span>
+          </div>
+
+          <div class="form-row">
+            <label for="email">Email *</label>
+            <input 
+              type="email"
+              name="email"
+              id="email"
+              placeholder="alex@example.com"
+              required>
+
+            <span>Required</span>
+          </div>
+
+          <div class="form-row">
+            <label for="phone-number">Phone Number *</label>
+            <input 
+              type="tel"
+              name="phone-number"
+              id="phone-number"
+              placeholder="99 9999-9999"
+              required>
+
+            <span>Required</span>
+          </div>
+
+          <div class="form-row">
+            <label for="password">Password *</label>
+            <input 
+              type="password"
+              name="password"
+              id="password"
+              minlength="8"
+              required>
+
+            <span>Password must be at least 8 characters</span>
+          </div>
+
+          <div class="form-row">
+            <label for="confirm-password">Confirm Password *</label>
+            <input 
+              type="password"
+              name="confirm-password"
+              minlength="8"
+              id="confirm-password"
+              required>
+
+            <span>Password must be at least 8 characters</span>
+          </div>
+        </form>
+      </div>
+
+      <div class="bottom-buttons">
+        <button type="submit" form="register">Create Account</button>
+
+        <p>Already have an account? <a href="/login">Log in</a></p>
+      </div>
+    </div>
 
   </body>
 </html>

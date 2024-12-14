@@ -3,6 +3,16 @@
   src: url("fonts/Norse-Bold.otf");
 }
 
+@font-face {
+  font-family: "Roboto Regular";
+  src: url("fonts/Roboto-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Roboto Bold";
+  src: url("fonts/Roboto-Bold.ttf");
+}
+
 *,
 *::before,
 *::after {
@@ -12,9 +22,14 @@
 }
 
 body {
+  font-family: "Roboto Regular";
   display: flex;
   height: 100vh;
-  background: red;
+}
+
+h3,
+label {
+  font-family: "Roboto Bold";
 }
 
 .left {
@@ -32,7 +47,7 @@ body {
   align-items: center;
   justify-content: center;
   position: absolute;
-  top: 15%;
+  top: 20%;
   left: 50%;
   translate: -50%;
   width: 100%;
@@ -45,4 +60,112 @@ body {
   font-size: 6rem;
   color: white;
   text-transform: uppercase;
+}
+
+.right {
+  flex: 1;
+  display: flex;
+  flex-flow: column;
+}
+
+.right .top {
+  flex: 1;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+  z-index: 2;
+  box-shadow: 0 4px 4px -3px rgb(126, 126, 126);
+}
+
+.right .top h3 {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.right .form {
+  width: 416px;
+  display: flex;
+  flex-flow: row wrap;
+  gap: 1rem;
+}
+
+.right .form-row {
+  display: flex;
+  flex-flow: column;
+  gap: .3125rem;
+}
+
+.right .form-row input {
+  width: 200px;
+  height: 25px;
+}
+
+.right .form-row label,
+.right .form-row span {
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.right input {
+  font-family: "Roboto Regular";
+  outline: none;
+  background-color: white;
+  border: 1px solid #E5E7EB;
+  border-radius: 2px;
+  padding-left: 2px;
+  appearance: none;
+}
+
+.right input:invalid {
+  border-color: rgb(184, 45, 45);
+}
+
+.right input:valid,
+.right input:focus {
+  border-color: rgb(45, 122, 184);
+}
+
+.right input + span {
+  display: none;
+}
+
+.right input:invalid + span {
+  color: red;
+  display: block;
+  font-size: .55rem;
+}
+
+.right .bottom-buttons {
+  flex: 1;
+  display: flex;
+  flex-flow: column;
+  gap: 1.2rem;
+  height: max-content;
+  padding: 2rem;
+  background-color: #f0f0f0;
+}
+
+.bottom-buttons button[type="submit"] {
+  font-family: "Roboto Bold";
+  width: 200px;
+  border: none;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 2px black;
+  color: white;
+  background-color: #596D48;
+  padding: 0.8rem 2.5rem;
+  appearance: none;
+}
+
+.bottom-buttons button[type="submit"]:hover {
+  opacity: 0.8;
+}
+
+.bottom-buttons a {
+  color: #596D48;
+  font-weight: bold;
+  text-decoration: none;
 }
